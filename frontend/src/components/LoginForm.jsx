@@ -116,6 +116,7 @@ const navigate = useNavigate();
           <div className="w-full max-w-[470px] mx-auto px-7 sm:px-10 py-14">
 
           <form>
+            <p>{message}</p>
             {/* Email */}
             <div>
 
