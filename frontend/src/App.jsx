@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Welcome from "./components/Welcome";
 import LoginForm from "./components/LoginForm";
 import Dashboard from "./components/Dashboard"; // ✅ import added
 
