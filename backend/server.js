@@ -33,7 +33,7 @@ app.get('/api/users',(req,res) => {
     res.json(users);
 })
 
-app.post('/api/login',(req,res) => {
+app.post('/login',(req,res) => {
     const userInputEmail = req.body.email;
     const userInputPassword = req.body.password;
     const user = users.find((user) => user.email === userInputEmail && user.password === userInputPassword);
