@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 const navigate = useNavigate();
+const API_URL = import.meta.env.VITE_API_URL;
 const LoginForm = () =>{
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
@@ -14,7 +15,7 @@ const LoginForm = () =>{
     const handleLogin = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post("http://localhost:5000/api/login",formData);
+            const response = await axios.post(API_URL,formData);
             setMessage(response.data.message);
             setuser(response.data.user)
         }
