@@ -26,10 +26,10 @@ const navigate = useNavigate();
 
         if(user){
           console.log(message);
-            navigate("/dashboard");
+            ///navigate("/dashboard");
         }else{
           console.log(message);
-            navigate("/login");
+           // navigate("/login");
         }
     }
 
