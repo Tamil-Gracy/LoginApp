@@ -1,13 +1,14 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-const navigate = useNavigate();
 const API_URL = import.meta.env.VITE_API_URL;
 const LoginForm = () =>{
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [message,setMessage] = useState('');
     const [user,setuser] = useState(null);
+    
+const navigate = useNavigate();
     const formData = {
         email : email,
         password: password
