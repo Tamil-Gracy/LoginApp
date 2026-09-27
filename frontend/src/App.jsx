@@ -12,15 +12,7 @@ function App() {
       <div className="min-h-screen bg-[#eef4f1] flex p-4">
 
         <Routes>
-          <Route
-            path="/login"
-            element={
-              <div className="w-full max-w-[1100px] min-h-[680px] bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col lg:flex-row mx-auto">
-                <Welcome />
-                <LoginForm />
-              </div>
-            }
-          />
+          <Route path="*" element={<LoginForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
 
