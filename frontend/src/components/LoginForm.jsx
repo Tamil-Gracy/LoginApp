@@ -16,7 +16,7 @@ const navigate = useNavigate();
     const handleLogin = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post({`${API_URL}/api/login`},formData);
+            const response = await axios.post(`${API_URL}/api/login`,formData);
             setMessage(response.data.message);
             setuser(response.data.user)
         }
