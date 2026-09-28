@@ -50,7 +50,7 @@ const navigate = useNavigate();
           {/* Welcome Text */}
           <div className="mt-10">
 
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#c3d891] leading-tight">
               Welcome
               <br />
               Back!
@@ -103,10 +103,6 @@ const navigate = useNavigate();
           </div>
 
 
-          {/* Decorative Leaves */}
-          <div className="absolute bottom-5 left-5 text-7xl opacity-30">
-            🌿
-          </div>
 
         </div>
         <div className="lg:w-[58%] bg-[#fbfdfc] flex items-center">
@@ -118,7 +114,7 @@ const navigate = useNavigate();
             {/* Email */}
             <div>
 
-              <label className="block text-sm font-semibold text-[#344c47] mb-2">
+              <label className="block text-sm font-semibold text-[#344c47] mb-2 text-left">
                 Email Address
               </label>
 
@@ -150,7 +146,7 @@ const navigate = useNavigate();
             {/* Password */}
             <div className="mt-6">
 
-              <label className="block text-sm font-semibold text-[#344c47] mb-2">
+              <label className="block text-sm font-semibold text-[#344c47] mb-2 text-left">
                 Password
               </label>
 
