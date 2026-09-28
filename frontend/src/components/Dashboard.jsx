@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const today = new Date();
 const formatted = today.toLocaleDateString('en-GB', {
   day: 'numeric',
@@ -7,14 +8,22 @@ const formatted = today.toLocaleDateString('en-GB', {
 });
 const Dashboard = () => {
 const location = useLocation();
+const navigate = useNavigate();
 const user = location.state?.userdata;
+const handleLogout = () => {
+    navigate('/')
+}
     return (<div className="min-h-screen bg-black flex items-center justify-center p-6">
                 <div className="bg-white rounded-2xl shadow-lg w-full max-w-6xl p-8">
-
+                    
                     {/* Header */}
                     <div className="mb-6">
-                        <h1 className="text-xl font-bold text-gray-900">Hello {user?.name}</h1>
+                        <h2 className="text-xl font-bold text-gray-900">Hello {user?.name}</h2>
                         <p className="text-blue-600 text-sm">I help you manage your activities :)</p>
+                        <button 
+                    className="bg-red-900 text-white px-4 py-2 rounded mt-3 cursor-pointer" 
+                    onClick={handleLogout}
+                    >Logout</button>
                     </div>
 
                     {/* Top 3 cards */}
