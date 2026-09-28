@@ -26,7 +26,7 @@ const navigate = useNavigate();
         catch(err){
             setMessage(err.response?.data?.message || 'Something went wrong...')
         }
-
+ 
     }
 
 
