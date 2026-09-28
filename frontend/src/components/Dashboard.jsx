@@ -1,12 +1,20 @@
-
-
+import { useLocation } from "react-router-dom";
+const today = new Date();
+const formatted = today.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
 const Dashboard = () => {
+    
+const location = useLocation();
+const user = location.state?.user;
     return (<div className="min-h-screen bg-black flex items-center justify-center p-6">
                 <div className="bg-white rounded-2xl shadow-lg w-full max-w-6xl p-8">
 
                     {/* Header */}
                     <div className="mb-6">
-                        <h1 className="text-xl font-bold text-gray-900">Hello Tamil!</h1>
+                        <h1 className="text-xl font-bold text-gray-900">Hello {user?.name}</h1>
                         <p className="text-blue-600 text-sm">I help you manage your activities :)</p>
                     </div>
 
@@ -14,7 +22,7 @@ const Dashboard = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                         <div className="bg-purple-200 rounded-lg p-6 text-center">
                             <p className="text-lg font-semibold text-gray-900">Today</p>
-                            <p className="text-gray-800 mt-1">28th September</p>
+                            <p className="text-gray-800 mt-1">{formatted}</p>
                         </div>
                         <div className="bg-green-200 rounded-lg p-6 text-center">
                             <p className="text-lg font-semibold text-gray-900">Completed</p>

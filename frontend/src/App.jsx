@@ -12,7 +12,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<LoginForm />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard userData={}/>} />
         </Routes>
 
       </div>
