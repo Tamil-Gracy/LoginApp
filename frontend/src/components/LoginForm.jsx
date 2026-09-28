@@ -20,7 +20,7 @@ const navigate = useNavigate();
             setMessage(response.data.message);
             setuser(response.data.user);
             if(response.data.user){
-              navigate("/dashboard",{ state: { user: response.data.user } });
+              navigate("/dashboard",{ state: { userdata: response.data.user } });
             }
         }
         catch(err){

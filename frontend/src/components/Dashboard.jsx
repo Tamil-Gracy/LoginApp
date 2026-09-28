@@ -8,7 +8,7 @@ const formatted = today.toLocaleDateString('en-GB', {
 const Dashboard = () => {
     
 const location = useLocation();
-const user = location.state?.user;
+const user = location.state?.userdata;
     return (<div className="min-h-screen bg-black flex items-center justify-center p-6">
                 <div className="bg-white rounded-2xl shadow-lg w-full max-w-6xl p-8">
 
