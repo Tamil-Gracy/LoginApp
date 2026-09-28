@@ -12,7 +12,7 @@ const navigate = useNavigate();
     const formData = {
         email : email,
         password: password
-    }
+    } 
     const handleLogin = async (e) => {
         e.preventDefault();
         try{
