@@ -18,19 +18,15 @@ const navigate = useNavigate();
         try{
             const response = await axios.post(`${API_URL}/api/login`,formData);
             setMessage(response.data.message);
-            setuser(response.data.user)
+            setuser(response.data.user);
+            if(response.data.user){
+              navigate("/dashboard");
+            }
         }
         catch(err){
             setMessage(err.response?.data?.message || 'Something went wrong...')
         }
 
-        if(user){
-          console.log(message);
-         navigate("/dashboard");
-        }else{
-          console.log(message);
-           navigate("/");
-        }
     }
 
 

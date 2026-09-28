@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginForm from "./components/LoginForm";
-import Dashboard from "./components/Dashboard"; // ✅ import added
+import Dashboard from "./components/Dashboard"; 
 
 function App() {
   const [showPassword, setShowPassword] = useState(false);
