@@ -8,7 +8,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#eef4f1] flex p-4">
+      <div className="min-h-screen bg-[#eef4f1] flex justify-center p-4">
 
         <Routes>
           <Route path="/" element={<LoginForm />} />

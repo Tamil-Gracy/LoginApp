@@ -35,7 +35,7 @@ const navigate = useNavigate();
 
     return(
         <>
-         <div className="lg:w-[42%] bg-[#064c3d] text-white p-8 sm:p-10 lg:p-12 relative">
+         <div className="lg:w-[42%] bg-[#064c3d] text-white p-5 sm:p-10 lg:p-12 relative">
 
           {/* Logo */}
           <div className="text-2xl font-bold">
@@ -50,16 +50,12 @@ const navigate = useNavigate();
           {/* Welcome Text */}
           <div className="mt-10">
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#c3d891] leading-tight">
-              Welcome
-              <br />
-              Back!
+            <h1 className="text-2xl sm:text-5xl font-bold text-[#c3d891] leading-tight">
+              Welcome Back!
             </h1>
 
             <p className="text-lg text-white/70 mt-6 leading-8">
-              Log in to access your
-              <br />
-              personal dashboard.
+              Log in to access your  personal dashboard.
             </p>
 
           </div>
@@ -110,7 +106,7 @@ const navigate = useNavigate();
           <div className="w-full max-w-[470px] mx-auto px-7 sm:px-10 py-14">
 
           <form>
-            <p>{message}</p>
+            <p className="text-red-700 text-left p-2">{message}</p>
             {/* Email */}
             <div>
 
