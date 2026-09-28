@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 const today = new Date();
 const formatted = today.toLocaleDateString('en-GB', {
   day: 'numeric',
@@ -6,15 +7,16 @@ const formatted = today.toLocaleDateString('en-GB', {
   year: 'numeric'
 });
 const Dashboard = () => {
-    
+const [username,setUsername] = useState('');
 const location = useLocation();
 const user = location.state?.userdata;
+setUsername(user?.name)
     return (<div className="min-h-screen bg-black flex items-center justify-center p-6">
                 <div className="bg-white rounded-2xl shadow-lg w-full max-w-6xl p-8">
 
                     {/* Header */}
                     <div className="mb-6">
-                        <h1 className="text-xl font-bold text-gray-900">Hello {user?.name}</h1>
+                        <h1 className="text-xl font-bold text-gray-900">Hello {username}</h1>
                         <p className="text-blue-600 text-sm">I help you manage your activities :)</p>
                     </div>
 
